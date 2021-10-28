@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		7BE17EC6272B01B10051EB36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE17EC4272B01B10051EB36 /* Main.storyboard */; };
 		7BE17EC8272B01B20051EB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE17EC7272B01B20051EB36 /* Assets.xcassets */; };
 		7BE17ECB272B01B20051EB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE17EC9272B01B20051EB36 /* LaunchScreen.storyboard */; };
+		7BE17ED4272B01ED0051EB36 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE17ED3272B01ED0051EB36 /* Realm */; };
+		7BE17ED6272B01ED0051EB36 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BE17ED5272B01ED0051EB36 /* RealmSwift */; };
+		7BE17ED8272B03550051EB36 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE17ED7272B03550051EB36 /* CustomTableViewCell.swift */; };
+		7BE17EDA272B03610051EB36 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE17ED9272B03610051EB36 /* AddViewController.swift */; };
+		7BE17EDC272B03D50051EB36 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE17EDB272B03D50051EB36 /* RealmModel.swift */; };
+		7BE17EDE272B040D0051EB36 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE17EDD272B040D0051EB36 /* RealmManager.swift */; };
+		7BE17EE0272B0A620051EB36 /* PressReadyTaskButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE17EDF272B0A620051EB36 /* PressReadyTaskButtonProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,11 @@
 		7BE17EC7272B01B20051EB36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE17ECA272B01B20051EB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BE17ECC272B01B20051EB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BE17ED7272B03550051EB36 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7BE17ED9272B03610051EB36 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		7BE17EDB272B03D50051EB36 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		7BE17EDD272B040D0051EB36 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		7BE17EDF272B0A620051EB36 /* PressReadyTaskButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressReadyTaskButtonProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE17ED6272B01ED0051EB36 /* RealmSwift in Frameworks */,
+				7BE17ED4272B01ED0051EB36 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +72,50 @@
 			children = (
 				7BE17EBE272B01B10051EB36 /* AppDelegate.swift */,
 				7BE17EC0272B01B10051EB36 /* SceneDelegate.swift */,
-				7BE17EC2272B01B10051EB36 /* ViewController.swift */,
+				7BE17EE4272B0C5E0051EB36 /* Controllers */,
+				7BE17EE3272B0C580051EB36 /* Cell */,
+				7BE17EE2272B0C440051EB36 /* Realm */,
+				7BE17EE1272B0C390051EB36 /* Protocol */,
 				7BE17EC4272B01B10051EB36 /* Main.storyboard */,
 				7BE17EC7272B01B20051EB36 /* Assets.xcassets */,
 				7BE17EC9272B01B20051EB36 /* LaunchScreen.storyboard */,
 				7BE17ECC272B01B20051EB36 /* Info.plist */,
 			);
 			path = ToDoRealm;
+			sourceTree = "<group>";
+		};
+		7BE17EE1272B0C390051EB36 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7BE17EDF272B0A620051EB36 /* PressReadyTaskButtonProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7BE17EE2272B0C440051EB36 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				7BE17EDB272B03D50051EB36 /* RealmModel.swift */,
+				7BE17EDD272B040D0051EB36 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		7BE17EE3272B0C580051EB36 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7BE17ED7272B03550051EB36 /* CustomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7BE17EE4272B0C5E0051EB36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BE17EC2272B01B10051EB36 /* ViewController.swift */,
+				7BE17ED9272B03610051EB36 /* AddViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,10 @@
 			dependencies = (
 			);
 			name = ToDoRealm;
+			packageProductDependencies = (
+				7BE17ED3272B01ED0051EB36 /* Realm */,
+				7BE17ED5272B01ED0051EB36 /* RealmSwift */,
+			);
 			productName = ToDoRealm;
 			productReference = 7BE17EBB272B01B10051EB36 /* ToDoRealm.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 7BE17EB2272B01B10051EB36;
+			packageReferences = (
+				7BE17ED2272B01ED0051EB36 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 7BE17EBC272B01B10051EB36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE17EDA272B03610051EB36 /* AddViewController.swift in Sources */,
+				7BE17EDC272B03D50051EB36 /* RealmModel.swift in Sources */,
 				7BE17EC3272B01B10051EB36 /* ViewController.swift in Sources */,
 				7BE17EBF272B01B10051EB36 /* AppDelegate.swift in Sources */,
+				7BE17EE0272B0A620051EB36 /* PressReadyTaskButtonProtocols.swift in Sources */,
+				7BE17ED8272B03550051EB36 /* CustomTableViewCell.swift in Sources */,
+				7BE17EDE272B040D0051EB36 /* RealmManager.swift in Sources */,
 				7BE17EC1272B01B10051EB36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +404,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BE17ED2272B01ED0051EB36 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BE17ED3272B01ED0051EB36 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BE17ED2272B01ED0051EB36 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		7BE17ED5272B01ED0051EB36 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BE17ED2272B01ED0051EB36 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BE17EB3272B01B10051EB36 /* Project object */;
 }
