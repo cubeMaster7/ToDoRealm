@@ -55,6 +55,7 @@
                                         <connections>
                                             <outlet property="readyButton" destination="cm3-Ku-1Dg" id="g86-SU-K4M"/>
                                             <outlet property="titleLabel" destination="9d2-zE-4Mr" id="0Sj-NY-0Ad"/>
+                                            <segue destination="akz-jg-4YZ" kind="show" identifier="editTask" id="EDQ-uu-wvU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,18 +101,18 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OEn-W0-dNO">
                                 <rect key="frame" x="20" y="279" width="374" height="32"/>
                                 <segments>
-                                    <segment title="No"/>
-                                    <segment title="Yes"/>
+                                    <segment title="Нет"/>
+                                    <segment title="Да"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey! Add some task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um4-zW-ty9">
-                                <rect key="frame" x="128" y="122" width="158" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бомжур! Добавь задачу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um4-zW-ty9">
+                                <rect key="frame" x="106.5" y="122" width="201" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is that task important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBs-Yy-BQm">
-                                <rect key="frame" x="119.5" y="230" width="175" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Это важная задача?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBs-Yy-BQm">
+                                <rect key="frame" x="124" y="230" width="166.5" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,7 +124,7 @@
                                     <constraint firstAttribute="height" constant="56" id="dDa-fv-Ntj"/>
                                     <constraint firstAttribute="width" constant="149" id="kkQ-qz-wyb"/>
                                 </constraints>
-                                <state key="normal" title="SAVE">
+                                <state key="normal" title="Сохранить">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -177,6 +178,9 @@
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EDQ-uu-wvU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -36,9 +36,9 @@ class CustomTableViewCell: UITableViewCell {
         }
 
         if model.taskReady {
-            readyButton.setBackgroundImage(UIImage(systemName: "chevron.down.circle.fill"), for: .normal)
+            readyButton.setBackgroundImage(UIImage(systemName: "chevron.down.square.fill"), for: .normal)
         } else {
-            readyButton.setBackgroundImage(UIImage(systemName: "chevron.down.circle"), for: .normal)
+            readyButton.setBackgroundImage(UIImage(systemName: "chevron.down.square"), for: .normal)
         }
     }
 }
