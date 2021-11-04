@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     let localRealm = try! Realm()
     var taskArray: Results<RealmModel>!
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }

@@ -38,7 +38,13 @@ class AddViewController: UIViewController {
         } else {
             
             //update
-            RealmManager.shared.updateModel(model: realmModel, title: textField.text!, property: Int32(segmentedControll.selectedSegmentIndex))
+            let results = localRealm.objects(RealmModel.self)
+            if let result = results.first {
+                try! localRealm.write {
+                    result.title = textField.text!
+                    result.priority = Int32(segmentedControll.selectedSegmentIndex)
+                }
+            }
             
 
             navigationController?.popViewController(animated: true)
