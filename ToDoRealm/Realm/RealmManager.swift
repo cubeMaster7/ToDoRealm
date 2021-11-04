@@ -33,6 +33,13 @@ class RealmManager {
         }
     }
     
+    func updateModel(model: RealmModel, title: String, property: Int32) {
+        try! localRealm.write {
+            model.title = title
+            model.priority = property
+        }
+    }
+    
     func updateReadyButtonTaskModel(task: RealmModel, bool: Bool){
         try! localRealm.write {
             task.taskReady = bool

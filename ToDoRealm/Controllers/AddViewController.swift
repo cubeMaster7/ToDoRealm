@@ -14,7 +14,8 @@ class AddViewController: UIViewController {
     
     var realmModel = RealmModel()
     var selectedIndex: RealmModel?
-    let realm = try! Realm()
+    let localRealm = try! Realm()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +38,9 @@ class AddViewController: UIViewController {
         } else {
             
             //update
-            let results = realm.objects(RealmModel.self)
-            if let result = results.first {
-                try! realm.write {
-                    result.title = textField.text!
-                    result.priority = Int32(segmentedControll.selectedSegmentIndex)
-                }
-            }
+            RealmManager.shared.updateModel(model: realmModel, title: textField.text!, property: Int32(segmentedControll.selectedSegmentIndex))
+            
+
             navigationController?.popViewController(animated: true)
         }
     }
